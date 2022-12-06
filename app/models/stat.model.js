@@ -5,6 +5,7 @@ module.exports = mongoose => {
             {
                 userGUID: String,
                 workout: String,
+                reps: Number,
                 weight: Number
             },
             { timestamps: true }

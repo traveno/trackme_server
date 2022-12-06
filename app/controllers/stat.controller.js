@@ -6,7 +6,9 @@ exports.create = async (req, res) => {
     const stat = new Stat({
         userGUID: req.body.userGUID,
         workout: req.body.workout,
-        weight: req.body.weight
+        weight: req.body.weight,
+        reps: req.body.reps,
+        createdAt: req.body.createdAt ?? new Date()
     });
 
     stat.save(stat).then(data => {
